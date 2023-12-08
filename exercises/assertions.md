@@ -36,3 +36,5 @@ Par exemple, on peut vérifier si une variable n'a pas de valeurs interdites.
        int c = b/n;  
    }`
 
+4. AssertThrows est plus clair et plus concis que l'exception de base, ce qui permet une meilleure lisibilité du code. De plus, `AssertThrows` renvoie des informations supplémentaires sur l'erreur et se concentre sur un scénario précis du test. Cela peut par exemple remplacer une utilisation de `fail` pour vérifier qu'une exception a bien été lancée.
+
