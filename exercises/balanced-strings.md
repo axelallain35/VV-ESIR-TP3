@@ -26,3 +26,15 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 ## Answer
 
+1. Parmi toutes les possibilités d'input, nous avons pu les répartir en partitions pour limiter le nombre de tests. Les partitions sont les suivantes :
+   - La String vide,
+   - Un symbole ouvrant suivi d'un symbole fermant du même type : "()",
+   - Un symbole ouvrant suivi d'un symbole fermant d'un type différent : "{)",
+   - Une suite de symboles ouvrants et fermants du même type : "{}()[]"
+   - Une suite de symboles ouvrants puis une suite de symboles fermants correspondants : "({[]})"
+   - Uniquements des symboles ouvrants/fermants : "((" / "))"
+   - Un symbole fermant suivi d'un symbole ouvrant : ")("
+   - Des paires alternées : "({)}"
+   - Une paire de symbole entourant du texte : "(vérificationvalidation)"
+   - Une paire de symbole au milieu d'un texte : "vérificati(onva)lidation"
+2. Nous avons ajouté au pom.xml le plugin jacoco pour pouvoir visualiser la couverture de test et nous avons réussi à obtenir une couverture de 100% de nos tests.
