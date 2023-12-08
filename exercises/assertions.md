@@ -25,3 +25,14 @@ Exemple de scénario où les deux assertions produisent la même sortie :
 String a = new Strin("1");
 AssertSame(a, a); -> Pass
 AssertEquals("1", a); -> Pass
+
+3. Nous pouvons aussi utiliser fail pour vérifier une condition pendant l'exécution d'un test.
+Par exemple, on peut vérifier si une variable n'a pas de valeurs interdites.
+ `@Test
+   public void test(int b, int n){
+     if(n==0){
+       fail("Cannot divide by 0");
+     } else {
+       int c = b/n;
+   }`
+
