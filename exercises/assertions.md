@@ -14,25 +14,25 @@ Answer the following questions:
 
 1. L'assertion provoque une erreur à cause d'une imprécision des nombres flottants et l'arrondissement des valeurs. Pour résoudre ce problème, il vaut mieux utiliser `assertEquals` en ajoutant en paramètre un delta correspondant au degré de tolérance.
 
-2. `AssertEquals` : les deux objets ont la même valeur.
-`AssertSame` : les deux objets sont les mêmes.
+2. `AssertEquals` : les deux objets ont la même valeur.  
+`AssertSame` : les deux objets sont les mêmes.  
 
-Exemple de scénario où les deux assertions ne produisent pas la même sortie :
-AssertSame("1", new String("1)); -> Fail
-AssertEquals("1", new String("1)); -> Pass
+Exemple de scénario où les deux assertions ne produisent pas la même sortie :  
+AssertSame("1", new String("1)); -> Fail  
+AssertEquals("1", new String("1)); -> Pass  
 
-Exemple de scénario où les deux assertions produisent la même sortie :
-String a = new Strin("1");
-AssertSame(a, a); -> Pass
-AssertEquals("1", a); -> Pass
+Exemple de scénario où les deux assertions produisent la même sortie :  
+String a = new Strin("1");  
+AssertSame(a, a); -> Pass  
+AssertEquals("1", a); -> Pass  
 
 3. Nous pouvons aussi utiliser fail pour vérifier une condition pendant l'exécution d'un test.
 Par exemple, on peut vérifier si une variable n'a pas de valeurs interdites.
- `@Test
-   public void test(int b, int n){
-     if(n==0){
-       fail("Cannot divide by 0");
-     } else {
-       int c = b/n;
+ `@Test  
+   public void test(int b, int n){  
+     if(n==0){  
+       fail("Cannot divide by 0");  
+     } else {  
+       int c = b/n;  
    }`
 
