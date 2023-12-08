@@ -15,3 +15,4 @@ Include the improved test code in this file.
 
 ## Answer
 
+Parmi les règles présentes dans pmd-documentation, nous avons en avons reconnu plusieurs dont nous avons parlé en cours. Par exemple, il ne faut pas oublier d'utiliser les décorateurs @After et @Before dans les méthodes setUp() et tearDown(), c'est ce que vérifient les règles JUnit4TestShouldUseBeforeAnnotation et JUnit4TestShouldUseAfterAnnotation. La règle DetachedTestCase vérifie qu'il n'y a bien qu'un seul cas de test par bloc @Test, afin de bien savoir quel est le bug si le test ne passe pas.
