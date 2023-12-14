@@ -41,6 +41,12 @@ class DateTest {
     }
 
     @Test
+    void testIsValidDate_8() {
+        assertTrue(Date.isValidDate(1, 1, 1));
+    }
+
+
+    @Test
     void testIsLeapYear_1() {
         assertFalse(Date.isLeapYear(2021));
     }
@@ -72,6 +78,11 @@ class DateTest {
         assertEquals(0, date_leap_next.nextDate().compareTo(new Date(29, 2, 2020)));
     }
 
+    @Test
+    void testNextDate_3() {
+        assertEquals(0, new Date(28, 12, 2020).nextDate().compareTo(new Date(29, 12, 2020)));
+    }
+
 
     Date date_prev = new Date(1, 1, 2022);
 
@@ -88,6 +99,16 @@ class DateTest {
     @Test
     void testPreviousDate_3() {
         assertEquals(0, date_leap_previous.previousDate().compareTo(new Date(29, 2, 2020)));
+    }
+
+    @Test
+    void testPreviousDate_4() {
+        assertEquals(0, new Date(2, 5, 2021).previousDate().compareTo(new Date(1, 5, 2021)));
+    }
+
+    @Test
+    void testPreviousDate_5() {
+        assertEquals(0, new Date(1, 2, 2021).previousDate().compareTo(new Date(31, 1, 2021)));
     }
 
     Date date1 = new Date(1, 1, 2022);

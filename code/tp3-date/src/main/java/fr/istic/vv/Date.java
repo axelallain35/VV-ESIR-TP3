@@ -16,7 +16,16 @@ class Date implements Comparable<Date> {
     }
 
     public static boolean isValidDate(int day, int month, int year) {
-        if (year < 1 || month < 1 || month > 12 || day < 1) {
+        if (year < 1) {
+            return false;
+        }
+        else if(month < 1){
+            return false;
+        }
+        else if(month > 12){
+            return false;
+        }
+        else if(day < 1){
             return false;
         }
         

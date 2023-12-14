@@ -87,8 +87,10 @@ IsLeapYear
   
 2. Nous obtenons une courverture de test de 80%. Pour augmenter notre couverture de test, nous avons ajouté des tests pour les NullPointerException dans le cas où la date est null. Nous nous sommes rendu compte que nous n'avions pas testé le cas de changement de jour lors d'une année bissextile, nous avons donc rajouté les cas de test correspondants. Maintenant, notre couverture de test est de 100%.
 
-3. Nous n'avons pas de cas où nous avons plus de 2 opérateurs booléens.
-
-4. 
+3. Nous n'avons pas de cas où nous avons plus de 2 opérateurs booléens.  
+  
+4. Après avoir utililsé PIT, nous obtenons une couverture de mutation de 94% avec 4 mutants qui ont survécu. Ce score est dû à la mutation "changed conditional boundary" qui, par exemple, change les '<' en '<='.  
+Exemple : if (year < 1) {return false;} , ici le mutant peut transformer l'opération en : year <= 1.
+En ajoutant des cas de tests pour les utilisations de ces opérateurs nous obtenons un score de 100%.
 
 
