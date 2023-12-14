@@ -41,4 +41,4 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 3. 
 
-4. Après avoir utilisé PIT, nous obtenons un score de mutation de 93% et l'ensemble de nos mutants ont été tués car nos tests ont bien capturé une mutation.
+4. Après avoir utilisé PIT, nous obtenons un score de mutation de 93% et l'ensemble de nos mutants ont été tués car nos tests ont bien capturé l'ensemble des mutations.
