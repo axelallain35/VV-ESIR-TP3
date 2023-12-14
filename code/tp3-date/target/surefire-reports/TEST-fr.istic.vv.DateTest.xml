@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="fr.istic.vv.DateTest" time="0.101" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="fr.istic.vv.DateTest" time="0.108" tests="25" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.9\bin"/>
-    <property name="sun.java.command" value="C:\Users\Axel\AppData\Local\Temp\surefire11309622002885813299\surefirebooter9874859811315303628.jar C:\Users\Axel\AppData\Local\Temp\surefire11309622002885813299 2023-12-13T15-43-57_120-jvmRun1 surefire1012285507858555340tmp surefire_010080482766195863975tmp"/>
+    <property name="sun.java.command" value="C:\Users\Axel\AppData\Local\Temp\surefire16132541109979841332\surefirebooter6398150590240944169.jar C:\Users\Axel\AppData\Local\Temp\surefire16132541109979841332 2023-12-14T12-45-33_878-jvmRun1 surefire14573331835081679153tmp surefire_012160546755176380772tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Axel\OneDrive\Documents\VV-ESIR-TP3\code\tp3-date\target\test-classes;C:\Users\Axel\OneDrive\Documents\VV-ESIR-TP3\code\tp3-date\target\classes;C:\Users\Axel\.m2\repository\org\junit\jupiter\junit-jupiter\5.6.2\junit-jupiter-5.6.2.jar;C:\Users\Axel\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\Axel\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Axel\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Axel\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\Axel\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.2\junit-jupiter-params-5.6.2.jar;C:\Users\Axel\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\Axel\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Axel\AppData\Local\Temp\surefire11309622002885813299\surefirebooter9874859811315303628.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Axel\AppData\Local\Temp\surefire16132541109979841332\surefirebooter6398150590240944169.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.9+11-LTS-201"/>
@@ -56,9 +56,29 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testCompareTo" classname="fr.istic.vv.DateTest" time="0.065"/>
-  <testcase name="testIsValidDate" classname="fr.istic.vv.DateTest" time="0.002"/>
-  <testcase name="testPreviousDate" classname="fr.istic.vv.DateTest" time="0.001"/>
-  <testcase name="testIsLeapYear" classname="fr.istic.vv.DateTest" time="0.001"/>
-  <testcase name="testNextDate" classname="fr.istic.vv.DateTest" time="0.001"/>
+  <testcase name="testPreviousDate_1" classname="fr.istic.vv.DateTest" time="0.053"/>
+  <testcase name="testPreviousDate_2" classname="fr.istic.vv.DateTest" time="0.001"/>
+  <testcase name="testPreviousDate_3" classname="fr.istic.vv.DateTest" time="0"/>
+  <testcase name="testIsValidDate_1" classname="fr.istic.vv.DateTest" time="0.002"/>
+  <testcase name="testIsValidDate_2" classname="fr.istic.vv.DateTest" time="0.002"/>
+  <testcase name="testIsValidDate_3" classname="fr.istic.vv.DateTest" time="0"/>
+  <testcase name="testIsValidDate_4" classname="fr.istic.vv.DateTest" time="0.001"/>
+  <testcase name="testIsValidDate_5" classname="fr.istic.vv.DateTest" time="0.001"/>
+  <testcase name="testIsValidDate_6" classname="fr.istic.vv.DateTest" time="0.001"/>
+  <testcase name="testIsValidDate_7" classname="fr.istic.vv.DateTest" time="0.001"/>
+  <testcase name="testCompareTo_1" classname="fr.istic.vv.DateTest" time="0.004"/>
+  <testcase name="testCompareTo_2" classname="fr.istic.vv.DateTest" time="0.001"/>
+  <testcase name="testCompareTo_3" classname="fr.istic.vv.DateTest" time="0.001"/>
+  <testcase name="testCompareTo_4" classname="fr.istic.vv.DateTest" time="0.001"/>
+  <testcase name="testCompareTo_5" classname="fr.istic.vv.DateTest" time="0.001"/>
+  <testcase name="testCompareTo_6" classname="fr.istic.vv.DateTest" time="0"/>
+  <testcase name="testCompareTo_7" classname="fr.istic.vv.DateTest" time="0"/>
+  <testcase name="testCompareTo_8" classname="fr.istic.vv.DateTest" time="0"/>
+  <testcase name="testDate_1" classname="fr.istic.vv.DateTest" time="0.001"/>
+  <testcase name="testIsLeapYear_1" classname="fr.istic.vv.DateTest" time="0.001"/>
+  <testcase name="testIsLeapYear_2" classname="fr.istic.vv.DateTest" time="0"/>
+  <testcase name="testIsLeapYear_3" classname="fr.istic.vv.DateTest" time="0"/>
+  <testcase name="testIsLeapYear_4" classname="fr.istic.vv.DateTest" time="0"/>
+  <testcase name="testNextDate_1" classname="fr.istic.vv.DateTest" time="0"/>
+  <testcase name="testNextDate_2" classname="fr.istic.vv.DateTest" time="0"/>
 </testsuite>

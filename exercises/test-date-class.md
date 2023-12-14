@@ -53,3 +53,42 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 ## Answer
 
+1.IsValidDate
+|   | IsValidDate          | IsNotValidDate |
+| :---------------: |:---------------:| :-----:|
+| Jour  |   jour > 1 et jour < 31       |  jour < 1 ou jour > 31 |
+| Mois | mois > 1 et mois < 12              |   mois < 1 ou mois > 12  |
+| Date invalide pour une année bissextile  | 29 Février : année bissextile         |    29 Février : année non bissextile |  
+  
+IsLeapYear
+|   | IsLeapYear          | IsNotLeapYear |
+| :---------------: |:---------------:| :-----:|
+| Années bissextiles ou non bissextiles  |   Année bissextile       |  Année non bissextile |  
+  
+  NextDate
+|   | GoodNextDate          | WrongNextDate |
+| :---------------: |:---------------:| :-----:|
+| Changement d'année quand avance d'une journée le 31 Décembre  |   return : 1 Janvier de l'année suivante       |  return : date non valide |
+| Changement de mois  |   return : 1er du Mois suivant       |  return : date non valide |  
+  
+  PreviousDate
+|   | GoodPreviousDate          | WrongPreviousDate |
+| :---------------: |:---------------:| :-----:|
+| Changement d'année quand recule d'une journée le 1er Janvier  |   return : 31 Décembre de l'année d'avant       |  return : date non valide |
+| Changement de mois  |   return : 31 du Mois précédent       |  return : date non valide |  
+  
+  CompareTo  
+|  | Entier positif | Entier Négatif | Zéro   |
+| :---------------: |:---------------:| :-----:| :-----:|
+| Comparaison de dates dans le même mois  |    10/01/2022 et 15/01/2022      | 15/01/2022 et 10/01/2022  | 10/01/2022 et 10/01/2022 |
+| Comparaison de dates dans la même année  |    15/01/2022 et 10/04/2022      | 10/04/2022 et 15/01/2022  | Impossible |
+| Comparaison de dates dans des années différentes  |   20/04/2022 et 15/01/2023       |  15/01/2023 et 20/04/2022 | Impossible
+  
+  
+2. Nous obtenons une courverture de test de 80%. Pour augmenter notre couverture de test, nous avons ajouté des tests pour les NullPointerException dans le cas où la date est null. Nous nous sommes rendu compte que nous n'avions pas testé le cas de changement de jour lors d'une année bissextile, nous avons donc rajouté les cas de test correspondants. Maintenant, notre couverture de test est de 100%.
+
+3. Nous n'avons pas de cas où nous avons plus de 2 opérateurs booléens.
+
+4. 
+
+

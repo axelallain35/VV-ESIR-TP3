@@ -26,19 +26,23 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 ## Answer
 
-1. Parmi toutes les possibilités d'input, nous avons pu les répartir en partitions pour limiter le nombre de tests. Les partitions sont les suivantes :
-   - La String vide,
-   - Un symbole ouvrant suivi d'un symbole fermant du même type : "()",
-   - Un symbole ouvrant suivi d'un symbole fermant d'un type différent : "{)",
-   - Une suite de symboles ouvrants et fermants du même type : "{}()[]"
-   - Une suite de symboles ouvrants puis une suite de symboles fermants correspondants : "({[]})"
-   - Uniquements des symboles ouvrants/fermants : "((" / "))"
-   - Un symbole fermant suivi d'un symbole ouvrant : ")("
-   - Des paires alternées : "({)}"
-   - Une paire de symbole entourant du texte : "(vérificationvalidation)"
-   - Une paire de symbole au milieu d'un texte : "vérificati(onva)lidation"
-2. Nous avons ajouté au pom.xml le plugin jacoco pour pouvoir visualiser la couverture de test et nous avons réussi à obtenir une couverture de 100% de nos tests.
+1. Parmi toutes les possibilités d'input, nous avons pu les répartir en partitions pour limiter le nombre de tests. Les partitions sont les suivantes :  
 
-3. 
+|   | IsBalanced          | IsNotBalanced |
+| :---------------: |:---------------:| :-----:|
+| String vide  |   Impossible       |  "" |
+| Symbole ouvrant suivi d'un symbole fermant | "()"             |   "{)" |
+| Suite de symboles ouvrants et fermants  | "{}()[]"          |    "{}(}[]" |
+| Suite de symboles ouvrants et fermants  | "{}()[]"          |    "{}(}[]" |
+| Suite de symboles ouvrants puis une suite de symboles fermants  | "({[]})"          |    "([[]})" |
+| Uniquements des symboles ouvrants/fermants  | Impossible          |    "((" / "))" |
+| Paires alternées  | Impossible          |    "({)}" |
+| Paire de symboles entourant du texte  | "(vérificationvalidation)"          |    "(vérificationvalidation}" |
+| Paire de symboles au milieu du texte  | "vérificati(onva)lidation"          |    "vérificati(onva}lidation" |
 
-4. Après avoir utilisé PIT, nous obtenons un score de mutation de 93% et l'ensemble de nos mutants ont été tués car nos tests ont bien capturé l'ensemble des mutations.
+
+2. Nous avons ajouté au pom.xml le plugin jacoco pour pouvoir visualiser la couverture de test et nous avons réussi à obtenir une couverture de 100% de nos tests.  
+  
+3. Nos cas de tests arrivent bien à satisfaire les prédicats avec plusieurs opérateurs booléens. S'il y avait eu une erreur, nous aurions pu utiliser le MC/DC en générant pour chaque condition 2 cas de test, tels que la décision du prédicat change alors que toutes les autres conditions sont fixées.  
+  
+4. Après avoir utilisé PIT, nous obtenons un score de mutation de 93% (dû au fait que PIT ne peut pas faire de mutation sur le nom de la classe) et l'ensemble de nos mutants ont été tués car nos tests ont bien capturé l'ensemble des mutations.
