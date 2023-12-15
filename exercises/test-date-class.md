@@ -54,35 +54,31 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 ## Answer
 
 1.IsValidDate
-|   | IsValidDate          | IsNotValidDate |
-| :---------------: |:---------------:| :-----:|
-| Jour  |   jour > 1 et jour < 31       |  jour < 1 ou jour > 31 |
-| Mois | mois > 1 et mois < 12              |   mois < 1 ou mois > 12  |
-| Date invalide pour une année bissextile  | 29 Février : année bissextile         |    29 Février : année non bissextile |  
+|   | b1 | b2 | b3 | b4 | b5 | b6 |
+| :---------------: |:---------------:| :-----:| :-----:| :-----:| :-----:|:-----:|
+| Jour  |   <0 |  0 | >= 1 and <= max(mois,année) | >max(mois,année)| | |
+| Mois |<0 |  0  |   { 1, 3, 5, 7, 8, 10, 12}  | { 1, 3, 5, 7, 8, 10, 12} | 2 | > 12 |
+| Année  | <0 |  0  |   année bissextile  | année commune |  |  |
   
 IsLeapYear
-|   | IsLeapYear          | IsNotLeapYear |
-| :---------------: |:---------------:| :-----:|
-| Années bissextiles ou non bissextiles  |   Année bissextile       |  Année non bissextile |  
+|   | b1  | b2 | b3 |
+| :---------------: |:---------------:| :-----:| :-----:|
+| Années   |   Année bissextile       |  Année non bissextile |  <0 |
   
   NextDate
-|   | GoodNextDate          | WrongNextDate |
-| :---------------: |:---------------:| :-----:|
-| Changement d'année quand avance d'une journée le 31 Décembre  |   return : 1 Janvier de l'année suivante       |  return : date non valide |
-| Changement de mois  |   return : 1er du Mois suivant       |  return : date non valide |  
+|   | b1          | b2 | b3 |
+| :---------------: |:---------------:| :-----:| :-----:|
+| Date |   31 Décembre      |  31 mois classique  | Date classique |
   
   PreviousDate
-|   | GoodPreviousDate          | WrongPreviousDate |
-| :---------------: |:---------------:| :-----:|
-| Changement d'année quand recule d'une journée le 1er Janvier  |   return : 31 Décembre de l'année d'avant       |  return : date non valide |
-| Changement de mois  |   return : 31 du Mois précédent       |  return : date non valide |  
+|   | b1          | b2 | b3 |
+| :---------------: |:---------------:| :-----:| :-----:|
+| Date |   1er Janvier      |  1er mois classique  | Date classique |
   
   CompareTo  
-|  | Entier positif | Entier Négatif | Zéro   |
-| :---------------: |:---------------:| :-----:| :-----:|
-| Comparaison de dates dans le même mois  |    10/01/2022 et 15/01/2022      | 15/01/2022 et 10/01/2022  | 10/01/2022 et 10/01/2022 |
-| Comparaison de dates dans la même année  |    15/01/2022 et 10/04/2022      | 10/04/2022 et 15/01/2022  | Impossible |
-| Comparaison de dates dans des années différentes  |   20/04/2022 et 15/01/2023       |  15/01/2023 et 20/04/2022 | Impossible
+|  | b1 | b2 | b3  | b4 |
+| :---------------: |:---------------:| :-----:| :-----:|  :-----:|
+| Dates | 2 dates identiques | 2 dates dans le même mois | Même année mais mois différents | Années différentes |
   
   
 2. Nous obtenons une courverture de test de 80%. Pour augmenter notre couverture de test, nous avons ajouté des tests pour les NullPointerException dans le cas où la date est null. Nous nous sommes rendu compte que nous n'avions pas testé le cas de changement de jour lors d'une année bissextile, nous avons donc rajouté les cas de test correspondants. Maintenant, notre couverture de test est de 100%.
